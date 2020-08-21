@@ -5,7 +5,7 @@
 ---
 server:
   port: 8001
-  
+
 spring:
   profiles: dev
   application:
@@ -21,14 +21,14 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
-      
+
 mybatis:
   mapper-locations: classpath:mybatis/**/*Mapper.xml
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.atguigu.springcloud.entities
   mapper-locations:
   - classpath: mybatis/mapper/**/*.xml
-  
+
 eureka: 
   client: #客户端注册进eureka服务列表内
     service-url:
@@ -37,7 +37,7 @@ eureka:
   instance: 
     instance-id: dept-8001 #实例名字
     prefer-ip-address: true  #访问路径可以显示IP地址
-    
+
 info: 
   app.name: atguigu-microservicecloud-springcloudconfig01
   company.name: www.atguigu.com
@@ -46,7 +46,7 @@ info:
 ---
 server:
   port: 8001
-  
+
 spring:
   profiles: test
   application:
@@ -62,14 +62,14 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
-      
+
 mybatis:
   mapper-locations: classpath:mybatis/**/*Mapper.xml
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.atguigu.springcloud.entities
   mapper-locations:
   - classpath: mybatis/mapper/**/*.xml
-  
+
 eureka: 
   client: #客户端注册进eureka服务列表内
     service-url:
@@ -78,7 +78,7 @@ eureka:
   instance: 
     instance-id: dept-8001 #实例名字
     prefer-ip-address: true  #访问路径可以显示IP地址
-    
+
 info: 
   app.name: atguigu-microservicecloud-springcloudconfig01
   company.name: www.atguigu.com
