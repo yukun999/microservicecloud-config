@@ -27,8 +27,6 @@ mybatis:
   type-aliases-package: com.atguigu.springcloud.entities
   mapper-locations:
   - classpath: mybatis/mapper/**/*.xml
-
-    
 ---
 server:
   port: 8001
