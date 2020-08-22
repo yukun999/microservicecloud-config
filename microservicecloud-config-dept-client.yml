@@ -3,13 +3,24 @@
     active: 
     - dev
 ---
-server: 
-  port: 7001
+server:
+  port: 8001
   
-spring: 
+spring:
   profiles: dev
-  application: 
-    name: microservicecloud-config-eureka-client
+  application:
+    name: microservicecloud-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB01
+    username: root
+    password: root
+    dbcp2: 
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
     
 eureka: 
   instance: 
@@ -20,13 +31,24 @@ eureka:
     service-url: 
       defaultZone: http://eureka7001.com:7001/eureka/
 ---
-server: 
-  port: 7001
-
-spring: 
+server:
+  port: 8001
+  
+spring:
   profiles: test
-  application: 
-    name: microservicecloud-config-eureka-client
+  application:
+    name: microservicecloud-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB02
+    username: root
+    password: root
+    dbcp2: 
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
 
 eureka: 
   instance: 
