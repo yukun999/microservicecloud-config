@@ -23,7 +23,6 @@ spring:
       max-wait-millis: 200
 
 mybatis:
-  mapper-locations: classpath:mybatis/**/*Mapper.xml
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.atguigu.springcloud.entities
   mapper-locations:
