@@ -21,15 +21,15 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+
+mybatis:
+  mapper-locations: classpath:mybatis/**/*Mapper.xml
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.atguigu.springcloud.entities
+  mapper-locations:
+  - classpath: mybatis/mapper/**/*.xml
+
     
-eureka: 
-  instance: 
-    hostname: eureka7001.com
-  client: 
-    register-with-eureka: false
-    fetch-registry: false
-    service-url: 
-      defaultZone: http://eureka7001.com:7001/eureka/
 ---
 server:
   port: 8001
@@ -50,13 +50,12 @@ spring:
       max-total: 5
       max-wait-millis: 200
 
-eureka: 
-  instance: 
-    hostname: eureka7001.com
-  client: 
-    register-with-eureka: false
-    fetch-registry: false
-    service-url: 
-      defaultZone: http://eureka7001.com:7001/eureka/    
+mybatis:
+  mapper-locations: classpath:mybatis/**/*Mapper.xml
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.atguigu.springcloud.entities
+  mapper-locations:
+  - classpath: mybatis/mapper/**/*.xml
+
   
     
